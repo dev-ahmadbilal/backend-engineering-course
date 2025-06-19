@@ -22,10 +22,10 @@ A code review checklist ensures that all aspects of the codebase are evaluated c
 - **Readability:** Check for clear naming conventions, consistent formatting, and concise logic.  
 - **Security:** Identify potential vulnerabilities, such as hardcoded secrets or unsafe practices.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Code reviews are like proofreading an essay—they catch errors and improve clarity before the final draft is published.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Code reviews are only for finding bugs. \
 **Reality:** They also improve code quality, share knowledge, and foster collaboration.
 
@@ -49,10 +49,10 @@ Static analysis tools automatically analyze code for potential issues, such as s
 - **Custom Rules:** Tailor linting rules to match your team’s coding standards.  
 - **Integration:** Use tools like ESLint, Prettier, or SonarQube within your CI/CD pipeline.  
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Choose static analysis tools based on language compatibility, ease of integration, and customization options.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Static analysis tools replace human reviews. \
 **Reality:** They complement reviews by catching low-level issues, leaving humans to focus on higher-level design.
 
@@ -73,10 +73,10 @@ Documentation is critical for ensuring that code is understandable and usable by
 - **Consistency:** Follow a standard format, such as OpenAPI or Swagger, for uniformity.  
 - **Up-to-Date:** Regularly update documentation to reflect changes in the codebase.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Documentation is like a map—it guides users through unfamiliar territory and helps them reach their destination efficiently.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Documentation is only needed for external APIs. \
 **Reality:** Internal APIs also benefit from clear documentation to onboard new team members and reduce misunderstandings.
 
@@ -100,10 +100,10 @@ Technical debt refers to shortcuts or compromises made during development that n
 - **Prioritization:** Use frameworks like cost-benefit analysis to decide what to address first.  
 - **Refactoring:** Allocate time in sprints to clean up code and reduce debt systematically.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Managing technical debt is like paying off a credit card—you avoid interest (bugs) by addressing issues early.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Some view technical debt as inherently bad. \
 **Reality:** It can be a strategic choice when used intentionally and managed responsibly.
 

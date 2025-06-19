@@ -21,10 +21,10 @@ Test-Driven Development (TDD) is a methodology where tests are written before th
   - For example, if you’re building a function to calculate the sum of two numbers, start by writing a test that expects `sum(2, 3)` to return `5`.  
 - **Focus on Small Units:** TDD emphasizes testing individual units of code, such as functions or methods, in isolation.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > TDD is like building a house with blueprints—you design the plan (tests) first and then construct the house (code) to match it.
 
-**Misconception:**  
+**🤔 Misconception:**  
 TDD slows down development.\
 **Reality:** It reduces debugging time and improves long-term maintainability.
 
@@ -60,10 +60,10 @@ Contract testing ensures that services interact correctly by verifying the agree
 - **Consumer-Driven Contracts:** Define expectations from the consumer’s perspective and validate them against the provider.  
 - **Decoupled Testing:** Allows teams to work independently while ensuring compatibility.  
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use contract testing when working with microservices to avoid integration issues during deployment.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Integration testing replaces unit testing.\
 **Reality:** Both are complementary—unit tests focus on individual components, while integration tests ensure they work together.
 
@@ -104,10 +104,10 @@ API testing validates the functionality, reliability, and security of APIs by si
 - **Error Handling:** Ensure APIs handle invalid requests gracefully.  
 - **Performance Metrics:** Measure response times and throughput under load.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > API testing is like testing a restaurant’s drive-thru—you verify that orders (requests) are processed correctly and delivered promptly.
 
-> **Anti-Pattern:**  
+> **⚠️ Anti-Pattern:**  
 > Ignoring edge cases in API testing can lead to unexpected failures in production.
 
 > **Do’s and Don’ts:**  
@@ -140,10 +140,10 @@ Load testing evaluates how a system performs under expected and peak loads. It h
 - **Metrics Collection:** Track response times, error rates, and resource utilization.  
 - **Capacity Planning:** Determine the maximum number of users the system can handle.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Load testing is like stress-testing a bridge—you apply increasing weight until you find its limits.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Performance testing is only for large-scale systems.\
 **Reality:** Even small applications benefit from identifying potential bottlenecks early.
 

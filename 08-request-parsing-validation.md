@@ -21,10 +21,10 @@ Headers provide metadata about the request, such as content type, authentication
 **Body Parsing:**  
 The request body contains the actual data sent by the client, which can vary in format (JSON, form data, multipart). Parsing the body involves interpreting this data based on the `Content-Type` header. Imagine receiving a package—you first check the label (`Content-Type`) to determine how to unpack it. Proper body parsing ensures the data is interpreted correctly, avoiding miscommunication.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Request parsing is not just about extracting data—it’s about understanding the context and intent of the request while maintaining security and performance.
 
-**Misconception:** 
+**🤔 Misconception:** 
 Parsing is trivial and doesn’t require much attention.\  
 **Reality:** Poor parsing can lead to vulnerabilities like injection attacks or misinterpretation of data.
 
@@ -47,7 +47,7 @@ Type validation checks whether data matches expected types (e.g., strings, numbe
 **Business Rule Validation:**  
 Business rule validation enforces application-specific logic. For example, premium accounts might require users to be at least 18 years old, or enterprise accounts might need a company name. These rules ensure that business policies are upheld, much like verifying eligibility criteria for a membership program.
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use schema-based validation for general structure, type validation for basic correctness, and business rule validation for domain-specific constraints.
 
 ### Sanitization Techniques
@@ -105,7 +105,7 @@ For example:
 }
 ```
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Proper error handling is crucial for API usability. Clear error messages and appropriate status codes help clients understand and resolve issues effectively.
 
 ### Trade-Offs:

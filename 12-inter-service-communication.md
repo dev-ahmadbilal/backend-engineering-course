@@ -20,7 +20,7 @@ Synchronous communication often relies on the request-response pattern, where on
 **API Design Considerations:**  
 Designing RESTful APIs involves careful planning to ensure scalability and maintainability. Resource-oriented design ensures that endpoints represent meaningful entities, like `/users` or `/orders`. Versioning strategies (e.g., URL-based or header-based) help manage changes without breaking existing clients. Rate limiting prevents abuse, while circuit breaking protects against cascading failures by temporarily halting requests to an unresponsive service.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Synchronous communication provides immediate feedback but can lead to tight coupling and cascading failures in distributed systems.
 
 **Performance Optimization:**  
@@ -34,7 +34,7 @@ gRPC uses Protocol Buffers (Protobuf) to define service contracts and serialize 
 **gRPC Features:**  
 gRPC supports advanced communication modes like server streaming, client streaming, and bidirectional streaming. Imagine a news feed app—it might use server streaming to push updates to clients in real-time. These features leverage HTTP/2 multiplexing, reducing latency and improving throughput.
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use gRPC for high-performance, low-latency scenarios with strict type safety requirements; otherwise, consider REST for simplicity and broader compatibility.
 
 ---
@@ -49,7 +49,7 @@ Message queues enable loose coupling by acting as intermediaries between produce
 **Message Processing:**  
 Ensuring message ordering and persistence is crucial for reliability. Acknowledgment mechanisms confirm successful delivery, while retries handle transient failures. Think of message queues as mail sorting centers—they route messages efficiently while handling delays or errors gracefully.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Message queues provide loose coupling and better scalability but introduce complexity in message ordering and consistency.
 
 ### Event-Driven Architecture
@@ -84,7 +84,7 @@ The control plane manages configuration, traffic routing, and security policies.
 **Data Plane:**  
 The data plane handles actual traffic, performing tasks like request routing and health checking. It ensures efficient communication between services, much like highways connecting cities.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Service mesh provides powerful operational capabilities but adds complexity and overhead to the system.
 
 ### Mesh Features
@@ -98,7 +98,7 @@ Mutual TLS (mTLS) encrypts communication between services, ensuring confidential
 **Observability:**  
 Distributed tracing tracks requests as they traverse multiple services, helping diagnose bottlenecks. Metrics and logs provide insights into system health, enabling proactive monitoring and troubleshooting.
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Adopt a service mesh when managing complex microservices ecosystems; otherwise, simpler solutions may suffice.
 
 ---
@@ -133,7 +133,7 @@ Retry with exponential backoff mitigates transient errors, while bulkheads isola
 **Recovery Strategies:**  
 Graceful degradation maintains core functionality during partial outages, while fallback mechanisms provide alternative paths. Compensation actions reverse incomplete operations, restoring integrity.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Handling failures effectively is key to building resilient distributed systems.
 
 ---

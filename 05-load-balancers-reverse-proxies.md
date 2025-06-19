@@ -38,10 +38,10 @@ Layer 7 load balancers work with HTTP/HTTPS protocols, inspecting and modifying 
 - Content-based routing: Serving different content based on user location or device type.  
 - SSL termination: Decrypting HTTPS traffic at the load balancer to offload processing from backend servers.  
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > The choice between Layer 4 and Layer 7 load balancing isn’t just about performance—it’s about the level of control and visibility you need over your traffic. Layer 4 is faster but less flexible, while Layer 7 provides more features at the cost of higher processing overhead.
 
-**Misconception:** 
+**🤔 Misconception:** 
 Layer 7 is always better than Layer 4.  \
 **Reality:** Each has its place—Layer 4 excels in speed, while Layer 7 offers richer functionality.
 
@@ -67,7 +67,7 @@ Routes requests based on client IP address, ensuring session consistency. It’s
 **URL Hash:**  
 Routes requests based on the request URL, optimizing caching and maintaining locality. It’s like directing customers to specific sections of a store based on what they’re buying. URL hash is particularly useful in CDN-like scenarios.  
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Choose algorithms based on factors like session persistence, server heterogeneity, and traffic patterns. For example, use weighted round robin for mixed-capacity servers and IP hash for stateful applications.
 
 ### Anti-Pattern:
@@ -107,7 +107,7 @@ Envoy uses YAML-based configuration to define listeners, filters, and clusters.
 - **Dynamic Configuration:** Updates settings without restarting.  
 - **Observability:** Provides detailed metrics and tracing for debugging.  
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > The choice of reverse proxy depends on your application’s needs. Nginx is great for simplicity, HAProxy for performance, and Envoy for cloud-native flexibility.
 
 ## 🏥 Health Checks & Failover

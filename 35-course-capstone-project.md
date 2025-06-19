@@ -50,7 +50,7 @@ Relying solely on synchronous operations during checkout can lead to bottlenecks
   - User behavior tracking helps optimize the platform.  
   - Performance metrics monitor system health and scalability.  
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Choose analytics tools based on data volume, retention needs, and visualization capabilities.
 
 ---
@@ -89,7 +89,7 @@ graph TD
 - **Microservices:** Each service focuses on a specific domain (e.g., authentication, products).  
 - **Databases:** Separate databases for each service ensure scalability and modularity.  
 
-**Misconception:**  
+**🤔 Misconception:**  
 Some believe monolithic architectures are inherently bad. \
 **Reality:** While microservices offer benefits, they also introduce complexity that must be managed.
 
@@ -116,7 +116,7 @@ Some believe monolithic architectures are inherently bad. \
    - **ELK Stack:** Centralizes logs for analysis and troubleshooting.  
    - **Jaeger:** Provides distributed tracing for debugging.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > The technology stack is like a toolbox—each tool has a specific purpose, and using the right one ensures success.
 
 ---
@@ -170,7 +170,7 @@ API documentation ensures that frontend developers and other stakeholders unders
 - Use OpenAPI/Swagger to define endpoints, request/response schemas, and error codes.  
 - Include examples for common use cases.  
 
-> **Anti-Pattern:**  
+> **⚠️ Anti-Pattern:**  
 > Neglecting API documentation leads to confusion and inefficiencies during integration.
 
 ---
@@ -184,7 +184,7 @@ Performance testing validates the system’s ability to handle expected loads wi
 - Throughput (requests per second).  
 - Error rates during stress tests.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Performance testing is like stress-testing a bridge—you identify weak points before opening it to traffic.
 
 ---

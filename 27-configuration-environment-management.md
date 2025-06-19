@@ -22,10 +22,10 @@ A configuration manager centralizes and manages application settings, ensuring c
 - **Environment Awareness:** Automatically applies settings specific to the current environment.  
 - **Validation:** Ensures configurations are complete and correct before deployment.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > A configuration manager is like a thermostat—it adjusts settings based on the room’s needs (environment) while maintaining comfort (functionality).
 
-**Misconception:**  
+**🤔 Misconception:**  
 Hardcoding configurations directly into the application is acceptable. \
 **Reality:** This approach makes it difficult to adapt to different environments and increases security risks.
 
@@ -44,10 +44,10 @@ Environment-specific configurations ensure applications behave correctly in diff
 - **Dynamic Loading:** Loads the appropriate configuration file or settings at runtime.  
 - **Fallback Mechanism:** Provides default values if environment-specific settings are missing.  
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use separate configuration files for each environment (e.g., `config.dev.json`, `config.prod.json`) or rely on environment variables for dynamic loading.
 
-> **Anti-Pattern:**  
+> **⚠️ Anti-Pattern:**  
 > Using the same configuration across all environments can lead to unexpected behavior, especially in production.
 
 ---
@@ -63,10 +63,10 @@ A secrets manager securely stores and retrieves sensitive information like passw
 - **Access Control:** Restricts who can view or modify secrets.  
 - **Rotation Policies:** Automatically updates secrets periodically to reduce exposure.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > A secrets manager is like a locked safe—it keeps valuable items secure and accessible only to those with the right combination.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Store secrets in plain text files or environment variables. \
 **Reality:** This is highly insecure and should be avoided.
 
@@ -87,10 +87,10 @@ Feature flags allow you to toggle features on or off without deploying new code.
 - **Granular Targeting:** Applies flags to specific users, groups, or environments.  
 - **Rollback Safety:** Quickly disable problematic features without redeploying.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Feature flags are like light switches—you can turn features on or off depending on the situation.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Feature flags are only for large-scale applications. \
 **Reality:** Even small projects benefit from the flexibility and safety they provide.
 
@@ -109,10 +109,10 @@ Dynamic configuration allows applications to adjust settings without restarting 
 - **External Storage:** Stores configurations in a centralized service like a database or configuration server.  
 - **Monitoring:** Tracks changes to detect and resolve issues quickly.  
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use dynamic configuration for settings that may need frequent adjustments, such as cache sizes or rate limits.
 
-> **Anti-Pattern:**  
+> **⚠️ Anti-Pattern:**  
 > Relying solely on static configuration files forces redeployment for every change, slowing down responsiveness.
 
 ---

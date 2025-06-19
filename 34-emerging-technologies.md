@@ -21,10 +21,10 @@ Serverless architecture abstracts away infrastructure management, allowing devel
 - **Auto-Scaling:** Automatically scales based on demand, from zero to thousands of concurrent executions.  
 - **Pay-as-You-Go Pricing:** Charges are based on execution time and frequency, reducing costs for sporadic workloads.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Serverless is like renting a car only when you need it—you pay for what you use without worrying about maintenance.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Serverless means "no servers." \
 **Reality:** Servers still exist but are managed by the cloud provider.
 
@@ -133,10 +133,10 @@ Edge computing brings computation closer to the data source, reducing latency an
 - **Bandwidth Optimization:** Offloads processing from central servers, reducing network congestion.  
 - **Scalability:** Distributes workloads across multiple edge locations.  
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use edge computing when low latency and high availability are critical, such as for real-time applications or global user bases.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Edge computing replaces cloud computing. \
 **Reality:** They complement each other—edge handles real-time tasks while the cloud manages heavy computations.
 
@@ -172,10 +172,10 @@ GraphQL Federation allows multiple services to contribute to a unified GraphQL s
 - **Unified API:** Clients interact with a single endpoint, simplifying frontend integration.  
 - **Schema Stitching:** Combines multiple schemas into one cohesive API.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > GraphQL Federation is like assembling a puzzle—each piece (service) contributes to the complete picture (API).
 
-**Misconception:**  
+**🤔 Misconception:**  
 Some assume GraphQL Federation is only for large-scale systems. \
 **Reality:** Even smaller teams benefit from modular schema design.
 
@@ -213,10 +213,10 @@ WebAssembly (Wasm) is a binary instruction format that enables near-native perfo
 - **Cross-Language Compatibility:** Supports multiple programming languages.  
 - **Portability:** Runs consistently across platforms, from browsers to servers.  
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use WebAssembly when performance is critical, such as for machine learning models or cryptographic operations.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Some assume WebAssembly is only for frontend applications. \
 **Reality:** It’s increasingly used in backend systems for performance-sensitive tasks.
 

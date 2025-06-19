@@ -32,20 +32,20 @@ Both parties generate a shared secret key using the Diffie-Hellman or RSA algori
 **Finished Messages:** 🎯  
 To confirm the handshake's success, both sides send "finished" messages encrypted with the newly established keys. These messages act as a final check, ensuring the connection is secure and operational. It's like shaking hands after agreeing on terms—both parties are confident they're ready to proceed.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > The TLS handshake is not just about encryption—it's about establishing trust. The certificate validation process is crucial for ensuring you're talking to the right server and not an impostor.
 
-**Misconception:** 
+**🤔 Misconception:** 
 TLS only encrypts data.  \
 **Reality:** TLS also authenticates the server and ensures data integrity, protecting against tampering and impersonation.
 
-**Misconception:**  
+**🤔 Misconception:**  
 TLS handshakes are always slow and add significant latency.  \
 **Reality:** Modern TLS with session resumption, OCSP stapling, and optimized cipher suites can have minimal overhead, often under 100ms for subsequent connections.
 
-> **Do's and Don'ts:**  
-> - **Do:** Use strong cipher suites and keep TLS libraries updated.  
-> - **Don't:** Rely on outdated protocols like SSL 3.0 or weak ciphers like RC4.
+> **✅ Do's and 🚫 Don'ts:**  
+> - **✅ Do:** Use strong cipher suites and keep TLS libraries updated.  
+> - **🚫 Don't:** Rely on outdated protocols like SSL 3.0 or weak ciphers like RC4.
 
 **Anti-Pattern:** Skipping certificate validation in development environments can lead to insecure deployments in production, exposing systems to spoofing attacks.
 
@@ -61,7 +61,7 @@ CAs are trusted third parties that verify the identity of certificate applicants
 
 This hierarchy ensures trust propagation—if you trust the root CA, you can trust certificates issued by its intermediates. Imagine a chain of command in an organization: trusting the CEO implies trusting their deputies.
 
-**Misconception:**  
+**🤔 Misconception:**  
 All CAs are equally trustworthy and secure.  \
 **Reality:** CAs vary significantly in security practices, validation procedures, and incident response capabilities. Some CAs have been compromised or issued fraudulent certificates.
 
@@ -74,10 +74,10 @@ The lifecycle of a digital certificate involves several stages:
 5. **Renewal:** Certificates are renewed before expiration to avoid service interruptions.  
 6. **Revocation:** Compromised certificates are invalidated to prevent misuse.  
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > PKI is only as strong as its weakest link. A compromised root CA can undermine trust in the entire system, which is why certificate authorities maintain strict security practices.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Certificate expiration is the only reason certificates become invalid.  \
 **Reality:** Certificates can be revoked for security reasons, domain ownership changes, or CA policy violations, making them invalid before expiration.
 
@@ -107,14 +107,14 @@ Modern web security relies on various HTTP headers:
 - **X-Frame-Options:** Prevents clickjacking by controlling iframe embedding.  
 - **X-Content-Type-Options:** Prevents MIME type sniffing, reducing the risk of unintended file execution.  
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > HTTPS is not just about encryption—it's about building a secure foundation for your entire web application. Every security header and configuration choice contributes to your application's overall security posture.
 
-**Misconception:**  
+**🤔 Misconception:**  
 HTTPS makes websites significantly slower than HTTP.  \
 **Reality:** Modern HTTPS implementations with HTTP/2, optimized cipher suites, and CDN integration can actually be faster than HTTP due to connection multiplexing and other optimizations.
 
-### Decision Framework:
+### 🧠 Decision Framework:
 When choosing cipher suites, prioritize:
 - **AES-GCM** for strong encryption.  
 - **ECDHE** for forward secrecy (ensures past communications remain secure even if keys are compromised).  
@@ -142,14 +142,14 @@ Adhere to security standards and best practices:
 - Implement PCI DSS requirements for handling sensitive data.  
 - Conduct regular security audits and penetration testing to identify weaknesses.  
 
-**Misconception:**  
+**🤔 Misconception:**  
 Once HTTPS is implemented, the application is secure.  \
 **Reality:** HTTPS is just one layer of security. Applications still need proper input validation, authentication, authorization, and other security measures to be truly secure.
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > When implementing HTTPS, consider factors like traffic volume, geographic distribution, and compliance requirements. For high-traffic sites, prioritize performance optimizations like session resumption and HTTP/2.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Self-signed certificates provide the same security as CA-signed certificates.  \
 **Reality:** Self-signed certificates provide encryption but not authentication, leaving users vulnerable to man-in-the-middle attacks since there's no trusted third party verifying the server's identity.
 
