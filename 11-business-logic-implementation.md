@@ -48,10 +48,10 @@ class OrderService {
 }
 ```
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Services should focus on business operations rather than technical details, delegating infrastructure concerns to appropriate layers. The key is to maintain a clear separation between business logic and technical implementation.
 
-**Misconception:** 
+**🤔 Misconception:** 
 The service layer is just a wrapper around database calls.  \
 **Reality:** It’s the heart of business logic, orchestrating operations and enforcing rules.
 
@@ -92,7 +92,7 @@ class OrderCommandHandler {
 }
 ```
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use the Command Pattern for complex operations requiring clear boundaries and reusability. For simpler operations, direct service methods may suffice.
 
 ---
@@ -143,7 +143,7 @@ class Address {
 }
 ```
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Effective domain modeling requires deep understanding of the business domain and careful consideration of entity relationships and boundaries. The key is to model the domain in a way that reflects the business reality.
 
 ### Trade-Offs:
@@ -229,7 +229,7 @@ class OrderBusinessValidator {
 }
 ```
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Business rules should be consistently enforced across all entry points to the system, with clear error handling and user feedback. The key is to validate both input data and business rules at appropriate levels.
 
 ---
@@ -289,7 +289,7 @@ class OrderSaga {
 }
 ```
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use local transactions for single-service operations and Sagas for distributed systems. Choose based on consistency requirements and failure tolerance.
 
 ---

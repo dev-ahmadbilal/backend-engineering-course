@@ -20,7 +20,7 @@ Sessions are validated by checking the session ID against server-side storage. I
 **Cookie Management:**  
 Cookies play a crucial role in session-based authentication by securely storing session IDs on the client side. Properly configured cookies (e.g., `httpOnly`, `secure`, and `sameSite`) prevent attacks like XSS (Cross-Site Scripting) and CSRF (Cross-Site Request Forgery). It’s like sealing your theme park wristband to prevent tampering.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Session-based authentication works well for small applications but can become a bottleneck in distributed systems due to the need for centralized session storage.
 
 ### Token-Based Authentication
@@ -46,7 +46,7 @@ Access tokens are short-lived (typically 15-60 minutes) to minimize risks if com
 
 When an access token expires, the client uses the refresh token to request a new access token from the server. The server validates the refresh token and issues a new access token if valid. This process continues until the refresh token expires, at which point the user must log in again.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Token-based authentication provides better scalability and statelessness but requires careful management of token lifecycle and security considerations.
 
 ### Trade-Offs:
@@ -69,7 +69,7 @@ The authorization code flow is designed for server-side applications and provide
 **Client Credentials Flow:**  
 The client credentials flow is used for machine-to-machine communication, where clients authenticate directly using their credentials. This flow is ideal for backend services that don’t involve user interaction. For instance, a delivery robot might authenticate itself to access warehouse APIs.
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Choose flows based on application type and security requirements. Use authorization code for user-facing apps and client credentials for server-to-server communication.
 
 ### OpenID Connect
@@ -80,10 +80,10 @@ OpenID Connect extends OAuth 2.0 by adding an ID token, which provides user iden
 **UserInfo Endpoint:**  
 The UserInfo endpoint allows clients to retrieve additional user details after authentication. This separation ensures that sensitive information isn’t included in tokens unless explicitly requested.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > OpenID Connect simplifies authentication by standardizing identity verification, making it easier to integrate with third-party services.
 
-**Misconception:** 
+**🤔 Misconception:** 
 OAuth 2.0 is just for authentication.\  
 **Reality:** OAuth 2.0 focuses on authorization, while OpenID Connect adds authentication capabilities.
 
@@ -105,7 +105,7 @@ Resource-based access control checks both role permissions and ownership. For ex
 **Policy-Based Access:**  
 Policy-based access control evaluates rules dynamically, considering factors like time of day, location, or user attributes. For instance, a policy might restrict admin actions to business hours or require multi-factor authentication for sensitive operations.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > RBAC provides a flexible and maintainable way to manage access control, but requires careful design of roles and permissions to avoid complexity and security issues.
 
 ### Trade-Offs:

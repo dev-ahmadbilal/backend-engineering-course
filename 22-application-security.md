@@ -21,14 +21,14 @@ The OWASP Top 10 is a list of the most critical security risks to web applicatio
 - **Broken Authentication:** Allows attackers to compromise passwords, keys, or session tokens.  
 - **Sensitive Data Exposure:** Happens when sensitive information is not properly protected.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Preventing OWASP vulnerabilities is like locking all doors and windows in your house—it reduces the risk of unauthorized access.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Using modern frameworks automatically protects against OWASP vulnerabilities. \
 **Reality:** Misconfigurations or improper usage can still lead to security gaps.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Security is only about preventing external attacks.  \
 **Reality:** Application security also includes protecting against insider threats, accidental data exposure, and ensuring proper access controls for legitimate users.
 
@@ -44,13 +44,13 @@ CSRF attacks trick users into performing actions they didn't intend to, such as 
 - **Token Validation:** Ensures requests include a valid CSRF token.  
 - **Safe Methods:** Exempts read-only methods (e.g., GET) from token validation.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > CSRF protection is like requiring a secret handshake before granting access—it ensures only authorized users can perform actions.
 
-> **Anti-Pattern:**  
+> **⚠️ Anti-Pattern:**  
 > Relying solely on cookies for authentication without validating CSRF tokens can expose your application to attacks.
 
-**Misconception:**  
+**🤔 Misconception:**  
 CSRF protection is only needed for forms and web applications.  \
 **Reality:** CSRF attacks can also target APIs and mobile applications, making CSRF protection important for all types of web services.
 
@@ -66,10 +66,10 @@ Token-based authentication, such as JWT (JSON Web Tokens), ensures secure commun
 - **Token Expiry:** Set short-lived tokens to minimize risk.  
 - **Secure Storage:** Store tokens securely (e.g., HTTP-only cookies).  
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use token-based authentication for stateless APIs where scalability is a priority.
 
-**Misconception:**  
+**🤔 Misconception:**  
 JWT tokens are encrypted and cannot be read by anyone.  \
 **Reality:** JWT tokens are signed, not encrypted by default. The payload is base64-encoded and can be easily decoded. Only the signature prevents tampering.
 
@@ -85,19 +85,19 @@ Rate limiting restricts the number of requests a user can make within a specific
 - **Define Limits:** Set thresholds based on expected usage patterns.  
 - **Track Requests:** Use IP addresses or user IDs to monitor activity.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Rate limiting is like setting a speed limit on a highway—it prevents reckless behavior while allowing normal traffic to flow.
 
-> **Anti-Pattern:**  
+> **⚠️ Anti-Pattern:**  
 > Overly strict rate limits can frustrate legitimate users, while overly lenient limits may fail to deter abuse.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Rate limiting is only needed for public APIs.  \
 **Reality:** Rate limiting is important for all APIs to prevent abuse, protect against brute force attacks, and ensure fair resource usage, even for authenticated users.
 
 ---
 
-## 📜 Security Headers & Content Policies
+## 📄 Security Headers & Content Policies
 
 ### Enforcing Security Headers
 
@@ -108,14 +108,14 @@ Security headers protect against common attacks by instructing browsers on how t
 - **X-XSS-Protection:** Enables browser-based XSS filtering.  
 - **X-Content-Type-Options:** Prevents MIME type sniffing.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Security headers are like bouncers at a club—they enforce rules to keep things safe and orderly.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Default headers provided by frameworks are sufficient. \
 **Reality:** Customizing headers based on your application's needs is crucial for robust security.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Security headers are only needed for web applications with user interfaces.  \
 **Reality:** Security headers are important for all web services, including APIs, as they help protect against various attacks and enforce security policies.
 

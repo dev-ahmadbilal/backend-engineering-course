@@ -20,7 +20,7 @@ This module explores event sourcing patterns, Command Query Responsibility Segre
 
 In event-sourced systems, events represent significant state changes or actions within the domain. For example, an "OrderPlaced" event signals that a customer has successfully placed an order. These events are immutable and serve as the source of truth, much like entries in a ledger.
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Events are like postcards sent from one part of the system to another—they notify recipients about what happened without dictating how to respond.
 
 **Key Characteristics of Events:**  
@@ -28,7 +28,7 @@ In event-sourced systems, events represent significant state changes or actions 
 - **Asynchronicity:** Events are processed independently of their producers.  
 - **Decoupling:** Producers and consumers operate independently, reducing dependencies.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Treating events as first-class citizens ensures traceability and auditability but requires careful design to avoid overwhelming the system with too many events.
 
 ---
@@ -83,7 +83,7 @@ Handles state changes by emitting events. It ensures business rules are enforced
 **Query Side:**  
 Provides optimized views for reading data. For instance, a dashboard might display aggregated statistics derived from raw events.
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use CQRS when there’s a clear distinction between read and write requirements. Avoid it for simple systems where the added complexity isn’t justified.
 
 ---
@@ -94,7 +94,7 @@ Provides optimized views for reading data. For instance, a dashboard might displ
 
 Aggregates encapsulate business logic and maintain consistency within a bounded context. They process commands, apply events, and enforce invariants. For example, an `Order` aggregate ensures that payments are processed only for valid orders.
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Aggregates act like referees in a game—they ensure the rules are followed and maintain order.
 
 ### Event Handlers
@@ -113,13 +113,13 @@ Event handlers react to events and update projections or trigger downstream acti
 
 As systems evolve, events may need to change. Versioning ensures backward compatibility by allowing old and new event formats to coexist. For example, adding a new field to an event shouldn’t break existing consumers.
 
-> **Anti-Pattern:** Ignoring versioning leads to brittle systems that break during upgrades.
+> **⚠️ Anti-Pattern:** Ignoring versioning leads to brittle systems that break during upgrades.
 
 ### Event Replay
 
 Replaying events allows you to rebuild projections or migrate data without losing historical context. For example, you might replay all "OrderCreated" events to populate a new reporting database.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Replay mechanisms are essential for maintaining flexibility and adaptability in evolving systems.
 
 ---

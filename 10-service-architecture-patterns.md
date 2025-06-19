@@ -67,10 +67,10 @@ class UserRepository {
 }
 ```
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > While three-tier architecture provides clear separation of concerns, it can lead to tight coupling between layers and make the system harder to maintain as it grows. The key is to maintain proper boundaries and avoid leaking implementation details across layers.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Three-tier architecture is outdated and should be replaced by modern patterns.  \
 **Reality:** Three-tier architecture is still widely used and effective for many applications. It provides a solid foundation and can be enhanced with modern patterns like dependency injection and clean architecture principles.
 
@@ -100,13 +100,13 @@ class UserService {
 
 Cross-cutting concerns like logging, security, and caching often span multiple layers, making it challenging to maintain clean separation. These concerns should be handled through middleware or aspects rather than scattering logic across layers.
 
-> **Do's and Don'ts:**  
-> - **Do:** Use dependency injection to decouple layers and improve testability.  
-> - **Don't:** Scatter cross-cutting concerns across layers—centralize them using middleware or decorators.
+> **✅ Do's and 🚫 Don'ts:**  
+> - **✅ Do:** Use dependency injection to decouple layers and improve testability.  
+> - **🚫 Don't:** Scatter cross-cutting concerns across layers—centralize them using middleware or decorators.
 
 **Anti-Pattern:** Creating an "anemic domain model," where business logic resides mostly in service classes rather than domain entities, undermines the purpose of layered architecture.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Layered architecture always leads to tight coupling between layers.  \
 **Reality:** Properly implemented layered architecture with dependency injection and clear boundaries can achieve loose coupling while maintaining separation of concerns.
 
@@ -176,10 +176,10 @@ class SQLOrderRepository extends OrderRepository {
 }
 ```
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Hexagonal architecture enables better testability and flexibility by inverting dependencies, but requires careful design of ports and adapters to avoid complexity. The key is to keep the core domain pure and independent of external concerns.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Hexagonal architecture is only for complex enterprise applications.  \
 **Reality:** Hexagonal architecture can benefit applications of any size by improving testability and maintainability, though the overhead may not be justified for very simple applications.
 
@@ -252,7 +252,7 @@ class UserController {
 **Frameworks & Drivers Layer:**  
 Contains the tools and frameworks that power the application, such as databases, web servers, and external services.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Clean architecture requires more code and complexity than simpler patterns.  \
 **Reality:** While clean architecture may require more initial setup, it often reduces complexity in the long run by making the codebase more maintainable, testable, and adaptable to change.
 
@@ -272,7 +272,7 @@ You can swap out databases without affecting the business logic.
 **Independence of External Agencies:**  
 The business logic doesn't depend on external services or APIs.
 
-**Misconception:**  
+🤔 Misconception:**  
 Clean architecture is only about organizing code into layers.  \
 **Reality:** Clean architecture is about dependency management and ensuring that business logic remains independent of external concerns, not just about folder structure.
 
@@ -292,7 +292,7 @@ A common language shared between developers and domain experts. This ensures tha
 **Context Mapping:**  
 Defines relationships between different bounded contexts, such as shared kernels, customer-supplier relationships, or conformist patterns.
 
-**Misconception:**  
+🤔 Misconception:**  
 DDD is only for complex domains with many business rules.  \
 **Reality:** DDD principles can be applied to any domain to improve code clarity and alignment with business requirements, though the level of implementation may vary.
 
@@ -346,7 +346,7 @@ Objects that provide access to aggregates, hiding the complexity of data persist
 **Services:**  
 Domain services that contain business logic that doesn't belong to any specific entity or value object.
 
-**Misconception:**  
+🤔 Misconception:**  
 DDD requires creating complex domain models for every piece of data.  \
 **Reality:** DDD should be applied where it adds value. Not every piece of data needs to be a rich domain object—sometimes simple data structures are more appropriate.
 
@@ -360,7 +360,7 @@ When working closely with domain experts who can provide insights into the busin
 **Long-term Projects:**  
 When the software will be maintained and evolved over a long period.
 
-**Misconception:**  
+🤔 Misconception:**  
 DDD is an all-or-nothing approach that must be applied to the entire system.  \
 **Reality:** DDD can be applied selectively to parts of a system where it provides the most value, while other parts may use simpler patterns.
 
@@ -390,7 +390,7 @@ When choosing an architectural pattern, consider:
 - Performance requirements
 - Integration needs
 
-**Misconception:**  
+🤔 Misconception:**  
 There's one "best" architectural pattern that should be used for all projects.  \
 **Reality:** The best architectural pattern depends on the specific requirements, team capabilities, and project constraints. Different patterns serve different purposes.
 
@@ -404,7 +404,7 @@ Replace parts of the system incrementally while keeping the old system running.
 **Parallel Implementation:**  
 Build the new system alongside the old one and switch over when ready.
 
-**Misconception:**  
+🤔 Misconception:**  
 Architectural changes require rewriting the entire system.  \
 **Reality:** Architectural improvements can often be implemented incrementally through refactoring, dependency injection, and careful design of new components.
 

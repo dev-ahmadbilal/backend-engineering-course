@@ -30,7 +30,7 @@ Centralized handling of common functionality ensures consistency and reduces red
 - **Logging and Monitoring:** Capturing detailed logs and metrics provides visibility into system behavior, helping identify issues quickly. This is like installing surveillance cameras to monitor activity in real-time.
 - **Request/Response Transformation:** Modifying requests and responses ensures compatibility and standardization. For example, converting XML to JSON makes data easier to process for modern applications.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > An API gateway is not just a router—it’s a strategic component that can significantly simplify your microservices architecture by centralizing common concerns and providing a unified interface to clients.
 
 **Misconceptions**:
@@ -57,7 +57,7 @@ Dynamic service discovery allows the gateway to locate backend services without 
 **Protocol Translation:**  
 Modern applications often use multiple protocols, such as REST, gRPC, and GraphQL. The gateway translates between these protocols, enabling seamless interaction between disparate systems. For example, converting RESTful requests into gRPC calls optimizes performance for internal services. This is like translating recipes into different languages so chefs worldwide can follow them.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Effective request routing requires careful planning and dynamic adaptation to ensure scalability and reliability.
 
 ### Request Transformation
@@ -72,7 +72,7 @@ Transforming request bodies ensures data is properly formatted for backend servi
 **Query Parameter Handling:**  
 Validating and normalizing query parameters ensures consistent behavior. For instance, injecting default values for missing parameters avoids ambiguity, while transforming parameters improves usability. Think of it as standardizing forms so everyone fills them out correctly.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Request transformation is not just about data format conversion—it’s about ensuring that requests are properly formatted, validated, and enriched before reaching backend services.
 
 ### Decision Framework:
@@ -95,7 +95,7 @@ This algorithm processes requests at a fixed rate, queuing excess requests until
 **Sliding Window Algorithm:**  
 Instead of fixed intervals, sliding windows track usage over rolling periods, providing more granular control. Distributed implementations using Redis enable cluster-wide coordination, ensuring fairness across nodes. This method suits high-traffic systems requiring precise enforcement.
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Choose rate-limiting strategies based on factors like traffic patterns, burst tolerance, and fairness requirements. Token bucket works well for general-purpose APIs, while sliding window excels in high-demand scenarios.
 
 ### Circuit Breaker Pattern
@@ -140,7 +140,7 @@ Enforcing role-based access control (RBAC) and resource-level permissions restri
 **Security Headers:**  
 Implementing headers like CORS, CSP, and HSTS enhances security by mitigating vulnerabilities like XSS and CSRF. These headers act as guardrails, preventing malicious actors from exploiting weaknesses.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Cross-cutting concerns should be implemented consistently across all services. The API gateway provides an ideal place to centralize these concerns, ensuring uniform implementation and easier maintenance.
 
 ## 📝 Quiz

@@ -56,7 +56,7 @@ class QueryMonitor {
 }
 ```
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Monitoring queries helps identify inefficiencies, but excessive logging can introduce overhead. Balance detail with performance impact.
 
 ---
@@ -72,10 +72,10 @@ Memory profiling tracks memory usage over time, helping you detect leaks or exce
 - **External Memory:** Monitors memory used by native extensions or libraries.  
 - **Snapshots:** Captures memory state at specific intervals for analysis.
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Memory profiling is like checking your car’s fuel gauge—it alerts you when something’s consuming more than expected.
 
-**Misconception:**
+**🤔 Misconception:**
 Many assume memory leaks only occur in poorly written code. \
 **Reality:** Even well-designed systems can leak memory due to improper resource cleanup or third-party dependencies.
 
@@ -92,7 +92,7 @@ Profiling tools help pinpoint performance bottlenecks by measuring execution tim
 - **I/O-bound Operations:** Slow disk reads/writes or network calls.  
 - **Blocking Code:** Synchronous operations that stall execution.
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use profiling tools early and often during development to catch issues before they escalate.
 
 ---
@@ -108,7 +108,7 @@ Indexes improve query performance by reducing the amount of data scanned. Think 
 - **Composite Indexes:** Combine multiple columns for complex queries.  
 - **Regular Maintenance:** Rebuild indexes periodically to prevent fragmentation.
 
-> **Anti-Pattern:**  
+> **⚠️ Anti-Pattern:**  
 > Over-indexing can degrade write performance and increase storage costs.
 
 ---

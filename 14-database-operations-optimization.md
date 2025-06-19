@@ -47,7 +47,7 @@ Durability ensures that once a transaction is committed, its changes are permane
 await dataSource.query('COMMIT');
 ```
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Understanding and implementing ACID properties is crucial for maintaining data integrity and consistency, especially in high-stakes environments like financial systems.
 
 ### Transaction Types
@@ -75,7 +75,7 @@ try {
 }
 ```
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use local transactions for simplicity and distributed transactions (e.g., Saga) for complex, multi-service operations.
 
 ---
@@ -123,7 +123,7 @@ SELECT * FROM users WHERE id IN (SELECT user_id FROM orders);
 SELECT u.* FROM users u INNER JOIN orders o ON u.id = o.user_id;
 ```
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Query optimization requires a deep understanding of both the database schema and the specific use case. The key is to focus on reducing computational overhead while maintaining accuracy.
 
 ---
@@ -154,7 +154,7 @@ GiST (Generalized Search Tree) and GIN (Generalized Inverted Index) are speciali
 CREATE INDEX idx_docs_content ON documents USING GIN(to_tsvector('english', content));
 ```
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Choose index types based on query patterns—B-trees for general use, hashes for equality, and GiST/GIN for specialized needs.
 
 ### Index Optimization
@@ -209,7 +209,7 @@ export const AppDataSource = new DataSource({
 
 Effective pooling ensures smooth operation even under heavy load.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Proper connection pooling is essential for scalability and performance, especially in high-concurrency environments.
 
 ### Resource Management

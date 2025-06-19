@@ -25,10 +25,10 @@ Using HTTP methods correctly is crucial:
 **Stateless Communication:**  
 Each request must contain all necessary information, as servers don’t retain session state between requests. This is similar to ordering food at a counter—you provide your entire order each time instead of relying on the staff to remember past interactions. Stateless communication improves scalability by allowing servers to handle requests independently.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > REST is not just about using HTTP methods—it’s about creating a resource-oriented architecture that’s intuitive, scalable, and maintainable.
 
-**Misconception:** 
+**🤔 Misconception:** 
 REST APIs are simply CRUD operations over HTTP.  \
 **Reality:** While CRUD is common, REST emphasizes resource modeling, statelessness, and hypermedia controls.
 
@@ -52,7 +52,7 @@ Efficient GraphQL implementations use techniques like field selection to minimiz
 **Error Handling:**  
 GraphQL errors are structured, providing detailed feedback about issues. For example, if a required field is missing, the response includes an error object with a code, message, and affected field. This clarity helps developers troubleshoot problems effectively.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > GraphQL’s flexibility comes with trade-offs. While it empowers clients to fetch precisely what they need, poorly optimized queries can lead to performance bottlenecks.
 
 ### Decision Framework:
@@ -78,7 +78,7 @@ gRPC supports various streaming modes:
 **Performance Benefits:**  
 gRPC leverages HTTP/2 for features like multiplexing, header compression, and binary transmission. These optimizations reduce latency and improve throughput, much like upgrading from a dirt road to a multi-lane highway.
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Protocol Buffers provide a language-agnostic way to define service contracts, enabling efficient serialization and strong typing across different programming languages.
 
 ### Trade-Offs:
@@ -98,7 +98,7 @@ Including version information in headers (e.g., `API-Version: 2.0`) keeps URLs c
 **Content Negotiation:**  
 Using media types (e.g., `application/vnd.example.v2+json`) allows versioning through content negotiation. This approach is elegant but harder to implement and debug.
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Choose URL versioning for simplicity and clarity, especially for public APIs. Use header or content negotiation for advanced scenarios where maintaining clean URLs is critical.
 
 ### Backward Compatibility

@@ -22,10 +22,10 @@ Service Level Objectives (SLOs) define the level of reliability your users expec
 - **Error Budgets:** The allowable margin of failure before breaching an SLO.  
   - This budget acts as a buffer, allowing teams to innovate while maintaining reliability.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > SLOs are like speed limits on a highway—they set expectations for how fast you should go (reliability) while leaving room for occasional slowdowns (errors).
 
-**Misconception:**  
+**🤔 Misconception:**  
 SLOs are only for large-scale systems. \
 **Reality:** Even small applications benefit from defining reliability goals.
 
@@ -46,10 +46,10 @@ An effective alerting strategy ensures that the right people are notified at the
 - **Anomaly Detection:** Identify unusual patterns that may indicate underlying problems.  
 - **Notification Channels:** Use tools like email, SMS, or chat platforms to deliver alerts.  
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use severity levels (e.g., P1, P2) to categorize alerts and ensure critical issues get immediate attention.
 
-> **Anti-Pattern:**  
+> **⚠️ Anti-Pattern:**  
 > Sending too many low-priority alerts overwhelms teams and reduces responsiveness to real issues.
 
 > **Do’s and Don’ts:**  
@@ -69,10 +69,10 @@ Incident response involves identifying, mitigating, and resolving issues as quic
 - **Runbooks:** Provide step-by-step guides for common incidents to reduce decision-making time.  
 - **Post-Mortem Analysis:** Conduct blameless reviews to identify root causes and prevent recurrence.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Incident response is like firefighting—you need a clear plan, the right tools, and teamwork to extinguish the flames quickly.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Post-mortems are only for major outages. \
 **Reality:** Reviewing even minor incidents helps uncover systemic issues.
 
@@ -93,7 +93,7 @@ On-call procedures ensure that team members are prepared to respond to incidents
 - **Escalation Paths:** Define who to contact if the primary responder is unavailable.  
 - **Tooling Support:** Equip on-call engineers with dashboards, runbooks, and communication tools.  
 
-> **Anti-Pattern:**  
+> **⚠️ Anti-Pattern:**  
 > Leaving on-call responsibilities to a single person or team creates bottlenecks and increases risk.
 
 > **Do’s and Don’ts:**  

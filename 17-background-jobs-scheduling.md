@@ -68,7 +68,7 @@ class LocalJobQueue {
 }
 ```
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Local job queues are easy to implement but struggle with scalability and fault tolerance. Distributed job queues address these limitations by distributing tasks across multiple workers.
 
 **Distributed Job Queue:**  
@@ -214,7 +214,7 @@ class Worker {
 }
 ```
 
-> **Critical Point:**  
+> **⚠️ Critical Point:**  
 > Distributed workers improve throughput and fault tolerance but require robust coordination mechanisms to avoid duplicate processing.
 
 ---

@@ -22,10 +22,10 @@ The Saga pattern addresses the challenge of managing distributed transactions ac
   - **Choreographed Sagas:** Each service listens for events and performs its part, with no central coordinator.  
 - **Compensating Actions:** If a step fails, the system executes rollback operations to undo previous steps.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > The Saga pattern is like planning a multi-leg journey—each leg must succeed, but if one fails, you have a backup plan to return to the starting point.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Sagas are only for financial transactions. \
 **Reality:** They can be applied to any distributed process that requires coordination.
 
@@ -138,10 +138,10 @@ Event Sourcing and Command Query Responsibility Segregation (CQRS) are powerful 
 - **Event Sourcing:** Captures every state change as an immutable event, enabling replayability and auditability.  
 - **CQRS:** Separates the read model (queries) from the write model (commands), allowing independent scaling and optimization.  
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Use Event Sourcing when auditability and traceability are critical, and CQRS when read and write loads differ significantly.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Event Sourcing and CQRS must always be used together. \
 **Reality:** While they complement each other, they can also be implemented independently.
 
@@ -269,10 +269,10 @@ The Strangler Fig pattern facilitates the gradual migration of legacy systems by
 - **Incremental Replacement:** Gradually replace parts of the legacy system without downtime.  
 - **Facade Layer:** Acts as a bridge between the old and new systems, routing requests appropriately.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > The Strangler Fig pattern is like renovating a house room by room—you don’t demolish the entire structure at once.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Some assume the pattern is only for monolithic systems. \
 **Reality:** It can also be applied to modularize or modernize parts of a distributed system.
 
@@ -354,10 +354,10 @@ Micro-frontends and Backend-for-Frontend (BFF) enable teams to build scalable, m
 - **Micro-frontends:** Allow different teams to develop and deploy frontend components independently.  
 - **BFF:** Creates tailored APIs for specific clients (e.g., web, mobile) to reduce over-fetching and under-fetching of data.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Micro-frontends are like assembling a puzzle—each piece fits together to form the complete picture. BFF ensures each piece gets exactly what it needs.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Micro-frontends require a single framework. \
 **Reality:** In reality, teams can use different technologies for each micro-frontend.
 

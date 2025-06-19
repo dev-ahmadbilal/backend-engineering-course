@@ -21,10 +21,10 @@ The circuit breaker pattern prevents cascading failures by stopping requests to 
 - **Thresholds:** Defines how many failures trigger the Open state.  
 - **Reset Timeout:** Determines how long to wait before testing recovery.
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > A circuit breaker is like a traffic light at a busy intersection—it stops cars when there’s an accident to prevent further chaos.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Circuit breakers are only useful for external services. \
 **Reality:** They’re equally valuable for internal components to prevent resource exhaustion.
 
@@ -41,10 +41,10 @@ The retry pattern with exponential backoff retries failed operations with increa
 - **Initial Delay:** Sets the base delay before the first retry.  
 - **Factor:** Multiplies the delay after each attempt.
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Retrying is like knocking on a door—if no one answers, you wait longer before trying again.
 
-> **Anti-Pattern:**  
+> **⚠️ Anti-Pattern:**  
 > Using fixed delays for retries can overwhelm the system during peak failures.
 
 ---
@@ -60,7 +60,7 @@ A robust backup strategy ensures data can be restored in case of failure. This i
 - **Retention:** Define how long backups are stored.  
 - **Testing:** Regularly test restores to ensure backups are usable.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Backups are sufficient for disaster recovery. \
 **Reality:** Without a clear recovery plan, restoring data can be time-consuming and error-prone.
 
@@ -70,10 +70,10 @@ Backups are sufficient for disaster recovery. \
 
 A recovery plan outlines steps to restore operations after a failure. This includes identifying critical systems, assigning responsibilities, and defining communication protocols.
 
-> **Decision Framework:**  
+> **🧠 Decision Framework:**  
 > Prioritize systems based on their impact on business operations.
 
-> **Anti-Pattern:**  
+> **⚠️ Anti-Pattern:**  
 > Failing to document and test recovery plans can lead to confusion and delays during emergencies.
 
 ---
@@ -88,7 +88,7 @@ Fault tolerance ensures a system continues operating, possibly at a reduced leve
 - **Redundancy:** Duplicate critical components to handle failures.  
 - **Load Shedding:** Drop non-critical requests to preserve core functionality.  
 
-> **Analogy:**  
+> **🧠 Analogy:**  
 > Fault tolerance is like a ship with watertight compartments—even if one section floods, the ship stays afloat.
 
 ---
@@ -97,7 +97,7 @@ Fault tolerance ensures a system continues operating, possibly at a reduced leve
 
 Graceful degradation ensures a system provides partial functionality when resources are limited. For instance, an e-commerce site might disable personalized recommendations during peak loads but keep checkout functionality intact.
 
-**Misconception:**  
+**🤔 Misconception:**  
 Graceful degradation compromises user experience. \
 **Reality:** It prioritizes critical features to maintain usability.
 
