@@ -12,13 +12,13 @@ This module delves into the critical security layer that protects data in transi
 
 The TLS handshake is a complex dance between client and server that establishes a secure connection. It's like two people agreeing on a secret language before having a private conversation—both parties must verify each other's identity and agree on the rules for encryption.
 
-**Client Hello:** 📤  
+**📤 Client Hello:**   
 The handshake begins with the client sending a "hello" message to the server. This message includes supported TLS versions, a list of cipher suites (encryption algorithms), random data for key generation, and a session ID if resuming a previous connection. Think of it as introducing yourself at a networking event—you share basic information to establish compatibility. The random data ensures that even repeated connections remain unique and secure.
 
-**Server Hello:** 📥  
+**📥 Server Hello:**   
 The server responds with its own "hello" message, selecting the highest mutually supported TLS version and cipher suite. It also sends its digital certificate, which contains the server's public key and identity information. The server's random data adds another layer of uniqueness to the handshake. Imagine this as the server saying, "Here's my ID card, and let's use this specific language to communicate."
 
-**Certificate Validation:** ✅  
+**✅ Certificate Validation:**   
 The client verifies the server's certificate by checking its validity against a chain of trust. This involves:
 - Ensuring the certificate is signed by a trusted Certificate Authority (CA)
 - Confirming the certificate hasn't expired
@@ -26,10 +26,10 @@ The client verifies the server's certificate by checking its validity against a 
 
 Think of certificate validation as verifying someone's passport at customs. If any step fails, the connection is terminated. This process is crucial because it prevents man-in-the-middle attacks where an imposter could intercept communications.
 
-**Key Exchange:** 🔑  
+**🔑 Key Exchange:**   
 Both parties generate a shared secret key using the Diffie-Hellman or RSA algorithm. The client encrypts a pre-master secret with the server's public key, ensuring only the server can decrypt it. This shared secret is then used to derive symmetric keys for encrypting and decrypting data. Imagine exchanging a locked briefcase: only the person with the correct key can open it.
 
-**Finished Messages:** 🎯  
+**🎯 Finished Messages:**   
 To confirm the handshake's success, both sides send "finished" messages encrypted with the newly established keys. These messages act as a final check, ensuring the connection is secure and operational. It's like shaking hands after agreeing on terms—both parties are confident they're ready to proceed.
 
 > **⚠️ Critical Point:**  

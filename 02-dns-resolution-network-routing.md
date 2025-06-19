@@ -22,16 +22,16 @@ DNS is just a simple lookup table.  \
 **Local DNS Cache:** 📱  
 Before reaching out to external servers, the system first checks local caches. The browser, operating system, and router each maintain their own DNS caches to speed up resolution. This is like checking your memory before asking someone else for directions—if you already know the answer, there's no need to waste time. Caching at this level reduces latency and minimizes unnecessary queries.
 
-**Recursive DNS Servers:** 🔄  
+**🔄 Recursive DNS Servers:**   
 If the local cache doesn't have the answer, the request is forwarded to recursive DNS servers. These servers act as intermediaries, querying other DNS servers on behalf of the client. ISPs often provide these servers, but public options like Google (`8.8.8.8`) or Cloudflare (`1.1.1.1`) are also widely used. Recursive servers cache results to improve performance for future queries, much like a librarian keeping a record of frequently requested books.
 
-**Root Name Servers:** 🌳  
+**🌳 Root Name Servers:**   
 If the recursive server doesn't have the answer, it consults one of the 13 root server clusters worldwide. These servers don't hold specific domain information but direct the query to the appropriate Top-Level Domain (TLD) server (e.g., `.com`, `.org`). Think of root servers as the central directory in a library—they don't store individual books but point you to the right section.
 
-**TLD Name Servers:** 🏷️  
+**🏷️ TLD Name Servers:**   
 TLD servers manage domain extensions like `.com`, `.net`, and `.org`. They direct the query to the authoritative name server responsible for the specific domain. For example, if you're looking for `example.com`, the `.com` TLD server will guide you to the authoritative server for `example.com`. This step is like narrowing down your search from a broad category to a specific shelf in the library.
 
-**Authoritative Name Servers:** 📜  
+**📜 Authoritative Name Servers:**   
 Finally, the authoritative name server holds the actual DNS records for the domain. It provides the final IP address, completing the resolution process. This is akin to finding the exact book you were searching for. Authoritative servers are managed by domain owners, giving them control over their DNS settings.
 
 > **⚠️ Critical Point:**  

@@ -22,22 +22,22 @@ Every request to a backend system follows a fascinating journey. To better under
 **DNS Resolution:** 🌍  
 The Domain Name System (DNS) acts as the internet's phone book, converting human-readable domain names (like google.com) into IP addresses (like 192.168.1.1). Without DNS, users would need to remember complex numbers for every website they visit. This step is crucial because it ensures requests are routed to the correct server. Think of DNS as the postal service sorting facility—it determines where your package needs to go.
 
-**Transport Layer Security (TLS):** 🔒  
+**🔒 Transport Layer Security (TLS):**
 Once the destination is identified, TLS ensures the package is transported securely. It encrypts data in transit, preventing unauthorized access or tampering. This is akin to sealing your package in a tamper-proof envelope. TLS is essential for protecting sensitive information, such as passwords or credit card details, from malicious actors.
 
-**HTTP Protocol:** 📡  
+**📡 HTTP Protocol:**
 The HTTP protocol defines the rules for communication between the client and server. It operates on a stateless request-response model, meaning each request is independent and doesn't retain memory of previous interactions. This is similar to ordering food at a restaurant: each order is treated separately, and the server doesn't assume you want the same dish unless you specify it. HTTP methods (GET, POST, etc.) and status codes (200, 404, etc.) provide structure to these interactions.
 
-**Load Balancer/Reverse Proxy:** ⚖️  
+**⚖️ Load Balancer/Reverse Proxy:**
 A load balancer distributes incoming traffic across multiple servers to prevent overload. Think of it as a traffic cop directing cars to different lanes during rush hour. It also handles SSL termination (decrypting secure connections) and optimizes performance by caching frequently requested data. Without a load balancer, a single server could become overwhelmed, leading to downtime.
 
-**API Layer:** 🎯  
+**🎯 API Layer:**
 The API layer acts as the entry point for business logic. It validates incoming requests, routes them to the appropriate services, and enforces authentication and authorization. Imagine a receptionist at a hotel—they verify your reservation, direct you to your room, and ensure you have access to the facilities you're entitled to use.
 
-**Service Layer:** ⚙️  
+**⚙️ Service Layer:** 
 The service layer implements the business logic, processes data, and manages transactions. This is where the "magic" happens—data is transformed, calculations are performed, and decisions are made. Think of it as the chefs in a restaurant's kitchen, preparing dishes based on orders from the dining area.
 
-**Data Layer:** 💾  
+**💾 Data Layer:**   
 Finally, the data layer stores and retrieves information, ensuring consistency and optimizing access. Databases act as the pantry or warehouse, keeping ingredients organized and ready for use. Proper design of the data layer is critical for performance, as inefficient queries can slow down the entire system.
 
 > **⚠️ Critical Point:**  
